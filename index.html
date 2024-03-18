@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <title>Stylish Phone Design</title>
+    <style>
+        /* Phone container */
+        .phone {
+            width: 320px;
+            height: 640px;
+            background-color: #1e1e1e;
+            border-radius: 30px;
+            margin: 50px auto;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        /* Screen */
+        .screen {
+            width: calc(100% - 20px);
+            height: 78%;
+            background-color: #ffffff;
+            border-radius: 20px;
+            margin: 10px auto;
+            position: relative;
+            overflow: hidden;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            background-image: url('../Mobile phone/Phone/Photo/IMG_20230217_171905~2.jpg');
+            background-size: cover;
+            background-position: center;
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+
+        }
+        /* App icon */
+        .app-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #ccc;
+            border-radius: 10px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+                /* Battery indicator */
+        .battery {
+            width: 60px;
+            height: 10px;
+            background-color: #333;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .battery-level {
+            width: 100%;
+            height: 100%;
+            background-color: #4caf50;
+        }
+       /* Date and Time */
+        .date-time {
+            position: absolute;
+            top: 10px; /* Updated position */
+            left: 10px; /* Updated position */
+            font-size: 14px;
+            color: white;
+        }
+        /* Time of the day */
+        .time {
+            position: absolute;
+            top: 30px; /* Updated position */
+            left: 10px; /* Updated position */
+            font-size: 14px;
+            color: white;
+        }
+             /* Incoming call display */
+        .incoming-call {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            display: none; /* Initially hidden */
+        }
+        /* Home button */
+        .home-button {
+            width: 60px;
+            height: 60px;
+            background-color: #333;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 20px;
+            left: calc(50% - 30px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Camera */
+        .camera {
+            width: 16px;
+            height: 16px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: calc(50% - 8px);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Speaker */
+        .speaker {
+            width: 100px;
+            height: 10px;
+            background-color: #444;
+            position: absolute;
+            top: 40px;
+            left: calc(50% - 50px);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Volume buttons */
+        .volume-button {
+            width: 8px;
+            height: 30px;
+            background-color: #333;
+            position: absolute;
+            bottom: 90px;
+            left: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Power button */
+        .power-button {
+            width: 16px;
+            height: 16px;
+            background-color: #333;
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="phone">
+        <div class="screen">
+       <!-- Screen content goes here -->
+     <div class="date-time" id="date-time"></div> <!-- Date and Time -->
+     <div class="time" id="time"></div> <!-- Time of the Day -->
+            
+      <a href="mailto: isaiahmc-owino254@gmail.com" class="app-icon"><i class="fas fa-envelope"></i></a>
+      <a href="https://mcowino20.github.io/developer254.mc/" class="app-icon"><i class="fas fa-globe"></i></a>
+      <a href="tel:+254742955188" class="app-icon"><i class="fas fa-phone"></i></a>
+        </div>
+    <div class="battery">
+            <div class="battery-level" style="width: 30%;"></div>
+        </div>
+        <div class="home-button"></div>
+        <div class="camera"></div>
+        <div class="speaker"></div>
+        
+       <div class="incoming-call" id="incoming-call">
+         <!-- Incoming call display -->
+        
+        <div class="incoming-icon"><i class="fas fa-phone-alt"></i></div>
+            <p>Incoming Call...</p>
+        
+        <div class="volume-button"></div>
+        <div class="volume-button" style="left: auto; right: 20px;"></div>
+        <div class="power-button"></div>
+    </div>
+ <script>
+        function updateTime() {
+            const now = new Date();
+            const dateOptions = { weekday: 'long', month: 'long', day: 'numeric' };
+            const timeOptions = { hour: '2-digit', minute: '2-digit', hour12: true };
+            const date = now.toLocaleDateString(undefined, dateOptions);
+            const time = now.toLocaleTimeString(undefined, timeOptions);
+            const year = now.getFullYear();
+            document.getElementById('date-time').textContent = `${date} - ${year}`;
+            document.getElementById('time').textContent = time;
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        // Simulate incoming call
+        setTimeout(() => {
+            document.getElementById('incoming-call').style.display = 'block';
+        }, 5000); // Show after 5 seconds
+    </script>
+</body>
+</html>
